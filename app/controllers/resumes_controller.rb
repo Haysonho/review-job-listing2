@@ -12,7 +12,7 @@ class ResumesController < ApplicationController
     @resume.job = @job
     @resume.user = current_user
     if @resume.save
-      redirect_to job_path
+      redirect_to job_path(@job)
     else
       render :new
     end
